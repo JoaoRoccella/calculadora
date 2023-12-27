@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#calculadora {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #0008;
+}
+
+.linha {
+    margin: 5px 0;
+    display: flex;
+    gap: 5px;
+}
+
+#visor {
+    line-height: 3;
+    font-size: 12pt;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 1px 1px 3px 1px #000;
+    background-color: #b8a6a6;
+}
+
+#visor:focus {
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+}
+
+.main {
+    background-color: rgba(0, 0, 212, 0.735);
+    color: #fff;
+}
