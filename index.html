@@ -10,10 +10,11 @@
     <div id="calculadora">
         
         <div class="linha">
-            <input id="visor" readonly>
+            <input id="placeholder" value="8888888888" disabled>
+            <input id="visor" value="0" min="-9999999999" max="9999999999" readonly>
         </div>
 
-        <div class="linha">
+        <div class="linha memoria">
             <button type="button">MC</button>
             <button type="button">MR</button>
             <button type="button">M+</button>
@@ -24,41 +25,41 @@
         <div class="linha">
             <button type="button">%</button>
             <button type="button">CE</button>
-            <button type="button">C</button>
+            <button type="button" onclick="botaoC()">C</button>
             <button type="button">⌫</button>
         </div>
 
         <div class="linha">
-            <button type="button">1/x</button>
-            <button type="button">x²</button>
+            <button type="button" class="entrada">1/x</button>
+            <button type="button" onclick="error()">x²</button>
             <button type="button">²√x</button>
             <button type="button">÷</button>
         </div>
 
         <div class="linha">
-            <button type="button">7</button>
-            <button type="button">8</button>
-            <button type="button">9</button>
+            <button type="button" class="entrada">7</button>
+            <button type="button" class="entrada">8</button>
+            <button type="button" class="entrada">9</button>
             <button type="button">×</button>
         </div>
 
         <div class="linha">
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">6</button>
+            <button type="button" class="entrada">4</button>
+            <button type="button" class="entrada">5</button>
+            <button type="button" class="entrada">6</button>
             <button type="button">–</button>
         </div>
 
         <div class="linha">
-            <button type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
+            <button type="button" class="entrada">1</button>
+            <button type="button" class="entrada">2</button>
+            <button type="button" class="entrada">3</button>
             <button type="button">+</button>
         </div>
 
         <div class="linha">
             <button type="button">+/-</button>
-            <button type="button">0</button>
+            <button type="button" class="entrada">0</button>
             <button type="button">∙</button>
             <button type="button" class="main">=</button>
         </div>
