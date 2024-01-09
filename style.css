@@ -15,7 +15,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+#imgFundo {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(4px) opacity(.8);
 }
 
 #calculadora {
@@ -23,6 +34,9 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 2px 2px 4px #0008;
+    z-index: 0;
+    position: absolute;
+    cursor: all-scroll;
 }
 
 .linha {
