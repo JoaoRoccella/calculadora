@@ -136,6 +136,10 @@ function calcula() {
             break;
     }
 
+    if (getVisor().value.length > 10) {
+        getVisor().value = 'Erro';
+    }
+
     setRegY(operacao);
     localStorage.removeItem('novaOperacao');
     ajustaPontoPlaceholder();
