@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('DigitalNumbers-Regular.woff') format('woff');
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgFundo {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(4px) opacity(.8);
+}
+
+#calculadora {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #0008;
+    z-index: 0;
+    position: absolute;
+    cursor: all-scroll;
+}
+
+.linha {
+    margin: 5px 0;
+    display: flex;
+    gap: 5px;
+}
+
+#visor {
+    line-height: 2;
+    font-size: 2rem;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    width: 10ch;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 1px 1px 2px #000;
+    background-color: transparent;
+    text-align: right;
+    color: #000a;
+    font-family: 'Digital Numbers Regular', monospace;
+    z-index: 2;
+}
+
+#visor:focus {
+    outline: none;
+}
+
+#placeholder {
+    position: absolute;
+    line-height: 2;
+    font-size: 2rem;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    width: 10ch;
+    border: none;
+    border-radius: 4px;
+    background-color: #b8a6a68f;
+    text-align: right;
+    font-family: 'Digital Numbers Regular', monospace;
+    color: #93939355;
+    z-index: 1;
+    direction: rtl;
+}
+
+button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 1px 1px #0008;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 1px #0008;
+}
+
+.memoria > button {
+    padding: 8px 0;
+    font-size: .8rem;
+}
+
+.main {
+    background-color: #4166d7;
+    color: #fff;
+}
