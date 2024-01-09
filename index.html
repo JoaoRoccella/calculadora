@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora com JavaScript</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="./icons8-calculation-sign-16.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,56 +16,58 @@
         </div>
 
         <div class="linha memoria">
-            <button type="button">MC</button>
-            <button type="button">MR</button>
-            <button type="button">M+</button>
-            <button type="button">M-</button>
-            <button type="button">MS</button>
+            <button type="button" onclick="cancelaMemoria()">MC</button>
+            <button type="button" onclick="recuperaMemoria()">MR</button>
+            <button type="button" onclick="somaMemoria()">M+</button>
+            <button type="button" onclick="subtraiMemoria()">M-</button>
+            <button type="button" onclick="registraMemoria()">MS</button>
         </div>
 
         <div class="linha">
-            <button type="button">%</button>
-            <button type="button">CE</button>
+            <button type="button" onclick="erro()">%</button>
+            <button type="button" onclick="botaoCE()">CE</button>
             <button type="button" onclick="botaoC()">C</button>
-            <button type="button">⌫</button>
+            <button type="button" onclick="erro()">⌫</button>
         </div>
 
         <div class="linha">
-            <button type="button" class="entrada">1/x</button>
-            <button type="button" onclick="error()">x²</button>
-            <button type="button">²√x</button>
-            <button type="button">÷</button>
+            <button type="button" onclick="inverso()">1/x</button>
+            <button type="button" onclick="quadrado()">x²</button>
+            <button type="button" onclick="raizQuadrada()">²√x</button>
+            <button type="button" onclick="setRegY('divisao')">÷</button>
         </div>
 
         <div class="linha">
             <button type="button" class="entrada">7</button>
             <button type="button" class="entrada">8</button>
             <button type="button" class="entrada">9</button>
-            <button type="button">×</button>
+            <button type="button" onclick="setRegY('multiplicacao')">×</button>
         </div>
 
         <div class="linha">
             <button type="button" class="entrada">4</button>
             <button type="button" class="entrada">5</button>
             <button type="button" class="entrada">6</button>
-            <button type="button">–</button>
+            <button type="button" onclick="setRegY('subtracao')">–</button>
         </div>
 
         <div class="linha">
             <button type="button" class="entrada">1</button>
             <button type="button" class="entrada">2</button>
             <button type="button" class="entrada">3</button>
-            <button type="button">+</button>
+            <button type="button" onclick="setRegY('soma')">+</button>
         </div>
 
         <div class="linha">
-            <button type="button">+/-</button>
+            <button type="button" onclick="mudaSinal()">+/-</button>
             <button type="button" class="entrada">0</button>
-            <button type="button">∙</button>
-            <button type="button" class="main">=</button>
+            <button type="button" class="entrada">.</button>
+            <button type="button" class="main" id="calcula" onclick="calcula()">=</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- <a target="_blank" href="https://icons8.com/icon/Bf8Fo3IK1359/calculation-sign">Calculation Sign</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+    
+    <script src="calculadora.js"></script>
 </body>
 </html>
